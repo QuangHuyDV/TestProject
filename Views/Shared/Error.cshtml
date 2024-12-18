@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Lỗi";
+}
+
+<h1>Lỗi</h1>
+
+@if (ViewBag.Error != null)
+{
+    <p>@ViewBag.Error</p>
+}
+else
+{
+    <p>Đã xảy ra lỗi không xác định.</p>
+}

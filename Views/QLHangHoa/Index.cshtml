@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/DangHuy_MainContent.cshtml";
+}
+
+<div class="btn btn-primary" style="margin: 10px;">
+    <a asp-action="Create">Thêm sản phẩm mới</a>
+</div>
+<div class="content_top">
+    <div class="heading" action="QLHangHoa">
+        <h3>Đặng Quang Huy</h3>
+    </div>
+    <div class="see">
+        <p><a href="#">Danh sách sản phẩm</a></p>
+    </div>
+    <div class="clear"></div>
+</div>
+
+@await Html.PartialAsync("DanhSachSanPham", Model as IEnumerable<HangHoa>)

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<head>
+	<title>Free Home Shoppe Website Template | Home :: w3layouts</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- Thêm jQuery từ CDN -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+	<!-- Begin Wrap -->
+	<div class="wrap">
+		<!-- Begin Header -->
+		<partial name="DangHuy_Header" />
+		<!-- End Header -->
+		<!-- Begin Main -->
+		<div class="main">
+			<div class="content">
+				<!-- Begin New Product -->
+				<main>
+					@RenderBody()
+				</main>
+				<!-- End New Product -->
+			</div>
+		</div>
+		<!-- End Main -->
+	</div>
+	<!-- End Wrap -->
+	<!-- Begin Footer -->
+	<div class="footer">
+		<partial name="DangHuy_Footer" />
+	</div>
+	<!-- End Footer -->
+</body>
+
+</html>

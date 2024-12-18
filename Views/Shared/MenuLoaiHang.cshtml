@@ -1,0 +1,28 @@
+@if (ViewBag.LoaiHangs != null && ViewBag.LoaiHangs.Count > 0)
+{
+    @foreach (var l in ViewBag.LoaiHangs)
+    {
+        <li>
+    <a href="@Url.Action("LoaiHang", "QLHangHoa", new { mid = l.MaLoai })">@l.TenLoai</a>
+</li>
+    }
+}
+<div class="clear"></div>
+<script>
+    $(document).ready(function () {
+        $(".loaiHangLink").click(function () {
+            const maLoai = $(this).data('id');
+            $.ajax({
+                url: '/QLHangHoa/LoaiHang',
+                type: 'GET',
+                data: { mid: maLoai },
+                success: function (response) {
+                    $(".section.group").html(response); // Replace product list
+                },
+                error: function () {
+                    alert('Lấy danh sách sản phẩm thất bại.');
+                }
+            });
+        });
+    });
+</script>
